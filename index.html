@@ -9,14 +9,22 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     />
+   <style>
+    body {background-color: rgb(224, 68, 7);}
+    h1   {color: rgb(255, 255, 255);}
+    p    {color: rgb(255, 255, 255);}
+    h3   {color: yellowgreen}
+    a    {color: rgb(0, 0, 0)}
+    div  {color: rgb(14, 44, 107)}
+   </style> 
   </head>
   <body>
     <div class="container">
       <!-- Add Jumbotron to Header -->
-      <div class="jumbotron text-center">
+      <div class="jumbotron text-center" style="background-image: url(https://s4.reutersmedia.net/resources/r/?m=02&d=20210223&t=2&i=1552541503&w=780&fh=&fw=&ll=&pl=&sq=&r=2021-02-23T035414Z_38835_MRPRC20YL98BW9P_RTRMADP_0_SPACE-EXPLORATION-MARS); height: 400px; background-position: center; background-size: cover;">
         <h1>Mission to Mars</h1>
         <!-- Add a button to activate scraping script -->
-        <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+        <p><a class="btn btn-primary btn-lg active" href="/scrape" role="button">Scrape New Data</a></p>
       </div>
 
       <!-- Add section for Mars News -->
@@ -40,7 +48,7 @@
           <!-- if images is False/None/non-existent, then default to error message -->
           <img
             src="{{mars.featured_image | default('static/images/error.png', true) }}"
-            class="img-responsive"
+            class="img-thumbnail"
             alt="Responsive image"
           />
         </div>
